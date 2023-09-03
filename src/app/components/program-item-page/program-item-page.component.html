@@ -1,0 +1,60 @@
+<div *ngIf="this.params !== null" class="container">
+    <div class="content">
+        <h1 class="content__title">{{this.params.title}}</h1>
+        <p *ngIf="this.params.type" class="sub-title">
+            {{this.params.type}}
+        </p>
+        <p class="content__title">Информация</p>
+        <p class="sub-title-info">{{this.params.info}}</p>
+        <ul class="zInfo">
+            <li *ngIf="this.params.zSumm?.length" class="zItem"><img src="assets/icons/money1.svg" alt="icon"
+                    class="icon"><label class="title">Сумма
+                    займа</label>
+                <p class="tx">{{this.params.zSumm}}</p>
+            </li>
+            <li *ngIf="this.params.zTime?.length" class="zItem"><img src="assets/icons/time1.svg" alt="icon"
+                    class="icon"><label class="title">Срок
+                    займа</label>
+                <p class="tx">{{this.params.zTime}}</p>
+            </li>
+
+            <li *ngIf="this.params.zBet?.length" class="zItem"><img src="assets/icons/bet1.svg" alt="icon"
+                    class="icon"><label class="title">Ставка</label>
+                <p class="tx">{{this.params.zBet}}</p>
+            </li>
+            <li *ngIf="this.params.zBudget?.length" class="zItem"><img src="assets/icons/budget1.svg" alt="icon"
+                    class="icon"><label class="title">Общий бюджет
+                    проекта</label>
+                <p class="tx">{{this.params.zBudget}}</p>
+            </li>
+            <li *ngIf="this.params.zFinancing?.length" class="zItem"><img src="assets/icons/financing1.svg" alt="icon"
+                    class="icon"><label class="title">Софинансирование заемщиком</label>
+                <p class="tx">{{this.params.zFinancing}}</p>
+            </li>
+            <!-- <li *ngIf="this.params.zSumm?.length" class="zItem"><img src="assets/icons/money.svg" alt="icon"
+                            class="icon"><label class="title">Сумма
+                            займа</label>{{this.params.zSumm}}</li> -->
+        </ul>
+        <div class="zItem__use" *ngIf="this.params.zUse?.length">
+            <div class="zItem-logo">
+                <img src="assets/icons/target.svg" alt="icon" class="icon"><label class="zItem__use-title">Целевое
+                    использование</label>
+            </div>
+            <p class="tx2">{{this.params.zUse}}</p>
+        </div>
+        <div class="contects">
+            <h1 class="content__title">Контактная информация</h1>
+            <p class="tx-contacts">
+                Фонд развития промышленности Севастополя <br>
+                Адрес: 299038, Севастополь г, Октябрьской революции пр-кт, дом 42-Б, корпус 6, офис 6 <br>
+                Тел.: +7 (978) 978-5777 <br>
+                Email: <a class="mail" href="mailto:info@frp-lnr.ru">info@frp-lnr.ru</a>
+            </p>
+        </div>
+        <h1 class="content__title">Подробная информация о программе</h1>
+        <p class="caption">
+            {{this.params.caption}}
+        </p>
+
+    </div>
+</div>

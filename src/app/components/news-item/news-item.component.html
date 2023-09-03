@@ -1,0 +1,10 @@
+<a *ngIf="newsItem" routerLink="detail" [queryParams]="newsItem" class="item">
+    <div class="img" [ngStyle]="{ 'background-image': getImg()}">
+    </div>
+    <h2 class="title">{{newsItem.title | maxLength: 43}}</h2>
+    <div class="description">
+
+        <quill-view  [content]="newsItem.description" ></quill-view>
+    </div>
+</a>
+<!-- routerLink="detail/{{ newsItem.id }}"  -->

@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(auto-fill, 250px);
+    grid-template-columns: 100%;
+    gap: 50px;
+}
+.title{
+    color: #003170;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 0;
+    padding-left: 10vw;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 1400px) {
+    .content {
+        grid-template-rows: repeat(auto-fill, 350px);
+    }
+}
+@media (max-width: 770px) {
+    .content {
+        grid-template-rows: repeat(auto-fill, 800px);
+    }
+}

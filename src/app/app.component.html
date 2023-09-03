@@ -1,0 +1,12 @@
+<div class="container">
+  <app-header></app-header>
+  <app-menu-mobile *ngIf="menu.visibility"></app-menu-mobile>
+  <div class="content">
+    <router-outlet></router-outlet>
+    <app-no-page
+    class="notification"
+    *ngIf="notification.getVisibility()"
+    ></app-no-page>
+  </div>
+  <app-footer></app-footer>
+</div>

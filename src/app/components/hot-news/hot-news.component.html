@@ -1,0 +1,7 @@
+<div *ngIf="dataNews" class="content">
+    <h1 *ngIf="dataNews.length > 0" class="title">Важные новости</h1>
+    <div class="container">
+        <app-news-item *ngFor="let newsItem of dataNews" [newsItem]="newsItem"></app-news-item>
+    </div>
+</div>
+<div class="line"></div>

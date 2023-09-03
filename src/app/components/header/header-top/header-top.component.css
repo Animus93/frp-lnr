@@ -1,0 +1,128 @@
+.container {
+  width: 100vw;
+  max-width: 1400px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.title-logo {
+  cursor: pointer;
+  background: url('src/assets/icons/frplogo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 230px;
+  transition: all .4s;
+}
+.title-logo:hover {
+  scale: .99;
+}
+
+.logo {
+  width: 25px;
+}
+
+.become-partner {
+  font-weight: bold;
+  font-size: var(--font-size-1);
+  border: 1px solid #e30016;
+  background: none;
+  border-radius: 6px;
+  color: #e30016;
+  cursor: pointer;
+  padding: 15px 29px;
+  transition: all 0.4s;
+}
+
+.become-partner:hover {
+  background-color: #e30016;
+  color: #fff;
+}
+
+.links__menu,
+.links__personal,
+.links__serch {
+  cursor: pointer;
+  font-size: var(--font-size-1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.4s;
+  padding: 7px 0;
+}
+
+.links div:hover {
+  color: #e30016;
+}
+
+.links__personal__text {
+  height: fit-content;
+  margin: 0;
+}
+
+.out {
+  display: none;
+}
+
+.links__menu {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .links__personal__text {
+    display: none;
+  }
+
+  .links div {
+    transition: all 0.4;
+  }
+
+  .links div:hover {
+    scale: 1.2;
+  }
+}
+
+@media (max-width: 900px) {
+  .in {
+    display: none;
+  }
+
+  .out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links__menu {
+    display: flex;
+  }
+
+  .links {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .become-partner {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .title-logo {
+    height: 80px;
+    width: 150px;
+  }
+  
+}
