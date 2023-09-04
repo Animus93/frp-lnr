@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderTopComponent } from './components/header/header-top/header-top.component';
 import { ContactsComponent } from './components/header/header-top/contacts/contacts.component';
@@ -17,11 +17,13 @@ import { QuillModule } from 'ngx-quill';
 import { MaxLengthPipe } from './pipes/max-length.pipe';
 import { ProgramsComponent } from './components/programs/programs.component';
 import { ProgramItemComponent } from './components/program-item/program-item.component';
-import { NewsItemPageComponent } from './components/news-item-page/news-item-page.component';
-import { ProgramItemPageComponent } from './components/program-item-page/program-item-page.component';
+import { NewsItemPageComponent } from './pages/news-item-page/news-item-page.component';
+import { ProgramItemPageComponent } from './pages/program-item-page/program-item-page.component';
 import { NoPageComponent } from './components/no-page/no-page.component';
-import { AboutPageComponent } from './components/about-page/about-page.component';
-import { JobsPageComponent } from './components/jobs-page/jobs-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
+import { JobsComponent } from './components/jobs/jobs.component';
+import { JobsItemComponent } from './components/jobs-item/jobs-item.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { JobsPageComponent } from './components/jobs-page/jobs-page.component';
     NoPageComponent,
     AboutPageComponent,
     JobsPageComponent,
+    JobsComponent,
+    JobsItemComponent,
   ],
   imports: [
     BrowserModule,

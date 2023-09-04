@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { NewsItemPageComponent } from './components/news-item-page/news-item-page.component';
-import { ProgramItemPageComponent } from './components/program-item-page/program-item-page.component';
-import { AboutPageComponent } from './components/about-page/about-page.component';
-import { JobsPageComponent } from './components/jobs-page/jobs-page.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { NewsItemPageComponent } from './pages/news-item-page/news-item-page.component';
+import { ProgramItemPageComponent } from './pages/program-item-page/program-item-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
 
 const routes: Routes = [
   {

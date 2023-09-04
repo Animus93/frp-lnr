@@ -2,6 +2,6 @@ export interface Inews {
     id?: number;
     title: string;
     img: string;
-    description: string;
+    caption: string;
     hot: boolean;
 }

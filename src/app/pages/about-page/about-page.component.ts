@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-page.component.css']
 })
 export class AboutPageComponent {
-
+  constructor(private _location: Location) { }
+  backClicked() {
+    this._location.back();
+  }
 }

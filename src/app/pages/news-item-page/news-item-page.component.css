@@ -1,6 +1,27 @@
 .container {
     /* width: 100%; */
-    padding: 50px 20px 100px 20px;
+    padding: 0px 20px 100px 20px;
+}
+
+.back {
+    padding: 5px 10px;
+    margin: 5px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    background: #003170;
+    color: #fff;
+    font-weight: 600;
+    justify-content: space-between;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.back:hover {
+    scale: .9;
 }
 
 .title {
@@ -12,6 +33,7 @@
 
 .content {
     display: flex;
+    gap: 20px;
 }
 
 .description {
@@ -35,12 +57,11 @@
     .title {
         text-align: center;
     }
+
     .preview {
         width: 100%;
         padding-bottom: 15px;
     }
 }
 
-    @media (max-width: 600px) {
-
-    }
+@media (max-width: 600px) {}

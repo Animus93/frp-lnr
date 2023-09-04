@@ -2,6 +2,27 @@
     width: 100%;
 }
 
+.back {
+    padding: 5px 10px;
+    margin: 5px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    background: #003170;
+    color: #fff;
+    font-weight: 600;
+    justify-content: space-between;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.back:hover {
+    scale: .9;
+}
+
 .content {
     padding: 0 15px 60px 5px;
 }

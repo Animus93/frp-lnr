@@ -1,9 +1,10 @@
+<button class="back" (click)="backClicked()"><img src="assets/icons/back.svg" alt="back arrow">Назад</button>
 <div class="container" *ngIf="this.params !== null">
     <h1 class="title">{{this.params.title}}</h1>
     <div class="content">
         <img src={{this.params.img}} alt="image" class="preview">
         <div class="description">
-            <quill-view [content]="this.params.description"></quill-view>
+            <quill-view [content]="this.params.caption"></quill-view>
         </div>
     </div>
 </div>

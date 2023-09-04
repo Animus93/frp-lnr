@@ -15,7 +15,7 @@
     background-color: rgba(1, 1, 37, 0.534);
     display: grid;
     grid-template-rows: 25% 5% 10% auto;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto 30%;
 }
 
 .line {
@@ -117,10 +117,11 @@
 
 .content__title {
     align-self: center;
-    justify-self: center;
+    justify-self: flex-start;
     color: #fff;
     font-size: 36px;
     font-weight: 400;
+    padding-left: 50px;
 }
 
 .content__type {
@@ -170,7 +171,7 @@
     }
 
     .content__title {
-        padding: 0 5px;
+        padding: 0 15px;
         grid-row: 1/2;
         grid-column: 1/-1;
     }
