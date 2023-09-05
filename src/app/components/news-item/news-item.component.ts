@@ -17,9 +17,6 @@ export class NewsItemComponent {
 
 
   // }
-  // ngOnInit() {
-  //   this.foo()
-  // }
   getImg(): string {
     return `url(${this.newsItem?.img})`
   }

@@ -3,8 +3,9 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    background-image: url('../../../assets/progs.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -137,11 +138,13 @@
 .zInfo-1400 {
     display: none;
 }
+
 .pt {
     width: 300px;
 }
 
 @media (max-width: 1400px) {
+
     /* .container {
         width: 100%;
         height: 350px;
@@ -209,7 +212,7 @@
 }
 
 @media (max-width: 770px) {
-
+    
     .container {
         height: 800px;
     }

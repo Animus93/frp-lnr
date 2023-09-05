@@ -4,4 +4,5 @@ export interface Inews {
     img: string;
     caption: string;
     hot: boolean;
+    postDate?: Date;
 }

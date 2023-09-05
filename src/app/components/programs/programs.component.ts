@@ -28,7 +28,6 @@ export class ProgramsComponent {
       return
     }
     const programs$ = this.programsService.getPrograms().subscribe(data => {
-      console.log('fetch progs')
       this.dataPrograms = data
       sessionStorage.setItem('savedData', JSON.stringify(data))
     })

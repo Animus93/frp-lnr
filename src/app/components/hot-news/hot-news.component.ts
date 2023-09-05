@@ -27,8 +27,7 @@ export class HotNewsComponent {
       return
     }
     const fetch$ = this.newsService.getNews().subscribe(data => {
-      console.log('fetch news')
-      this.dataNews = data
+      this.dataNews = data.reverse()
       sessionStorage.setItem('savedData1', JSON.stringify(data))
     })
     this.subscriptions$.add(fetch$)

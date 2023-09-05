@@ -1,9 +1,9 @@
 <a *ngIf="newsItem" routerLink="detail" [queryParams]="newsItem" class="item">
     <div class="img" [ngStyle]="{ 'background-image': getImg()}">
     </div>
+    <p class="date">{{newsItem.postDate}}</p>
     <h2 class="title">{{newsItem.title | maxLength: 43}}</h2>
     <div class="description">
-
         <quill-view  [content]="newsItem.caption" ></quill-view>
     </div>
 </a>
