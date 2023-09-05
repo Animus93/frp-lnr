@@ -83,7 +83,7 @@
 .title {
     color: #003170;
     font-weight: bold;
-    font-size: clamp(1rem, 1.2vw, 2rem);
+    font-size: clamp(1rem, 1.2vw, 1.6rem);
     line-height: 1.16;
     grid-column: 2;
     grid-row: 1/2;
