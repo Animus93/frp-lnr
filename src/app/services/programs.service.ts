@@ -14,4 +14,9 @@ export class ProgramsService {
   getPrograms(): Observable<Iprograms[]> {
     return this.http.get<Iprograms[]>(`${this.dbLink}/programs`)
   }
+
+  getProgramsItem(id: number) {
+    return this.http.get<Iprograms>(`${this.dbLink}/programs/${id}`);
+  }
+
 }

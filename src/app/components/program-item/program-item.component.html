@@ -2,7 +2,7 @@
         <div class="conetnt">
                 <p class="content__title">{{programItem.title}}</p>
 
-                <a routerLink="program" [queryParams]="programItem" class="content__btn">Подробнее</a>
+                <a routerLink="program/{{programItem.id}}" class="content__btn">Подробнее</a>
 
                 <div class="line"></div>
                 <p class="content__type">{{programItem.type}}</p>
