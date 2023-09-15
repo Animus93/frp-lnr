@@ -114,7 +114,7 @@
 }
 
 .zItem__use-title {
-    align-self: center;
+    /* align-self: center; */
     color: #003170;
     font-weight: bold;
     font-size: clamp(1rem, 1.2vw, 2rem);
@@ -122,9 +122,10 @@
 }
 
 .tx2 {
+    justify-self: flex-start;
     margin: 0;
     padding: 0;
-    align-self: center;
+    /* align-self: center; */
     padding-left: 45px;
     padding-top: 10px;
     line-height: 25px;

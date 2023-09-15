@@ -8,32 +8,32 @@ import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
 
 const routes: Routes = [
   {
-    path: 'frp-lnr.ru',
+    path: 'main',
     component: MainPageComponent,
   },
   {
-    path: 'frp-lnr.ru/program/:id',
+    path: 'main/program/:id',
     component: ProgramItemPageComponent,
   },
   {
-    path: 'frp-lnr.ru/detail/:id',
+    path: 'main/detail/:id',
     component: NewsItemPageComponent,
   },
   {
-    path: 'frp-lnr.ru/jobs',
+    path: 'main/jobs',
     component: JobsPageComponent,
   },
   {
-    path: 'frp-lnr.ru/about',
+    path: 'main/about',
     component: AboutPageComponent,
   },
   {
-    path: 'frp-lnr.ru/:fragment',
+    path: 'main/:fragment',
     component: MainPageComponent,
   },
   {
     path: '**',
-    redirectTo: 'frp-lnr.ru',
+    redirectTo: 'main',
   },
 ];
 

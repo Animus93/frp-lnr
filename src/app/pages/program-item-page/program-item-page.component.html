@@ -32,9 +32,6 @@
                     class="icon"><label class="title">Софинансирование заемщиком</label>
                 <p class="tx">{{programsItem.zFinancing}}</p>
             </li>
-            <!-- <li *ngIf="programsItem.zSumm?.length" class="zItem"><img src="assets/icons/money.svg" alt="icon"
-                            class="icon"><label class="title">Сумма
-                            займа</label>{{programsItem.zSumm}}</li> -->
         </ul>
         <div class="zItem__use" *ngIf="programsItem.zUse?.length">
             <div class="zItem-logo">
@@ -53,9 +50,9 @@
             </p>
         </div>
         <h1 class="content__title">Подробная информация о программе</h1>
-        <p class="caption">
+        <quill-view class="caption" [content]="programsItem.caption"></quill-view>
+        <!-- <p class="caption">
             {{programsItem.caption}}
-        </p>
-
+        </p> -->
     </div>
 </div>
