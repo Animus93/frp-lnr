@@ -152,6 +152,40 @@
     line-height: 25px;
 }
 
+.pdfLink {
+    padding: 10px 0;
+    height: 100px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+}
+
+.pdf {
+    /* width: 100px; */
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    transition: all .5s;
+}
+
+.pdfName {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all .5s;
+}
+
+.pdfLink:hover .pdf{
+    scale: .9;
+}
+
+.pdfLink:hover .pdfName{
+    color: #024fb4;
+}
+
 @media(max-width: 500px) {
     .zItem__use {
         padding-left: 0px;
