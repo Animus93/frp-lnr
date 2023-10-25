@@ -1,20 +1,16 @@
-import { Component, HostListener } from '@angular/core';
-import { Inews } from 'src/app/interfaces/Inews.interface';
+import { Location } from '@angular/common';
+import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NewsService } from 'src/app/services/news.service';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css'],
+  selector: 'app-news-page',
+  templateUrl: './news-page.component.html',
+  styleUrls: ['./news-page.component.css']
 })
-export class MainPageComponent {
-  constructor(private newsService: NewsService) { }
+export class NewsPageComponent {
+  constructor(private _location: Location, public newsService: NewsService) { }
   private subscriptions$: Subscription = new Subscription();
-
-  showElement = false;
-  // dataNews?: Inews[];
-
   ngOnInit() {
     this.getData()
   }
@@ -28,24 +24,14 @@ export class MainPageComponent {
       return
     }
     const fetch$ = this.newsService.getNews().subscribe(data => {
+      console.log('fetch')
       this.newsService.setNewsState(data.reverse())
       sessionStorage.setItem('savedData1', JSON.stringify(data))
     })
     this.subscriptions$.add(fetch$)
   }
-
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
-    const scrollPercentage =
-      (window.pageYOffset /
-        (document.documentElement.scrollHeight - window.innerHeight)) *
-      100;
-    if (scrollPercentage >= 10) {
-      this.showElement = true;
-    } else {
-      this.showElement = false;
-    }
+  backClicked() {
+    this._location.back();
   }
   ngOnDestroy(): void {
     this.subscriptions$.unsubscribe();

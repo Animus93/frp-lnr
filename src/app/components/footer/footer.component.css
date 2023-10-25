@@ -29,11 +29,33 @@
     background-size: contain;
     width: 200px;
     height: 100px;
+    cursor: pointer;
+    transition: all .5s;
 }
-
+.title-logo:hover {
+scale: .9;
+}
+.social {
+    width: fit-content;
+    display: flex;
+    column-gap: 10px;
+}
+.social__icon{
+    width: 30px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.social__icon:hover{
+    scale: .9;
+}
 @media (max-width:400px) {
     .title-logo {
         width: 130px;
         height: 35px;
+    }
+}
+@media (max-width:620px) {
+    .title-logo {
+        display: none;
     }
 }

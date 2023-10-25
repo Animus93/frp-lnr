@@ -24,6 +24,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { JobsItemComponent } from './components/jobs-item/jobs-item.component';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { JobsItemComponent } from './components/jobs-item/jobs-item.component';
     JobsPageComponent,
     JobsComponent,
     JobsItemComponent,
+    NewsPageComponent,
   ],
   imports: [
     BrowserModule,

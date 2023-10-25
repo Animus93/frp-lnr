@@ -5,6 +5,7 @@ import { NewsItemPageComponent } from './pages/news-item-page/news-item-page.com
 import { ProgramItemPageComponent } from './pages/program-item-page/program-item-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'main/detail/:id',
     component: NewsItemPageComponent,
+  },
+  {
+    path: 'main/news',
+    component: NewsPageComponent,
   },
   {
     path: 'main/jobs',
