@@ -51,12 +51,24 @@
         </div>
         <h1 class="content__title">Подробная информация о программе</h1>
         <quill-view class="caption" [content]="programsItem.caption"></quill-view>
+        <div class="files">
 
-        <a class="pdfLink" *ngIf="'assets/pdf/'+programsItem.title+'.pdf'"
-            [href]="'assets/pdf/'+programsItem.title+'.pdf'" download>
-            <img class="pdf" src="assets/icons/png.png" alt="">
-            <p class="pdfName">{{programsItem.title}}</p>
-        </a>
+            <a class="pdfLink" *ngIf="'assets/pdf/'+programsItem.title+'.pdf'"
+                [href]="'assets/pdf/'+programsItem.title+'.pdf'" download>
+                <img class="pdf" src="assets/icons/png.png" alt="">
+                <p class="pdfName">{{programsItem.title}}</p>
+            </a>
+            <a class="pdfLink" *ngIf="'assets/pdf/static/Обеспечение возврата займа.pdf'"
+                [href]="'assets/pdf/'+programsItem.title+'.pdf'" download>
+                <img class="pdf" src="assets/icons/png.png" alt="">
+                <p class="pdfName">Обеспечение возврата займа</p>
+            </a>
+            <a class="pdfLink" *ngIf="'assets/pdf/static/Мониторинг.pdf'"
+                [href]="'assets/pdf/'+programsItem.title+'.pdf'" download>
+                <img class="pdf" src="assets/icons/png.png" alt="">
+                <p class="pdfName">Мониторинг</p>
+            </a>
+        </div>
         <!-- <p class="caption">
             {{programsItem.caption}}
         </p> -->

@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Inews } from 'src/app/interfaces/Inews.interface';
 import { NewsService } from 'src/app/services/news.service';
+import { LoaderService } from 'src/app/services/loader.service';
 
 @Component({
   selector: 'app-news-item-page',
@@ -13,7 +14,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class NewsItemPageComponent {
   // params: any = null;
 
-  constructor(private router: ActivatedRoute, private _location: Location, private newsService: NewsService) { }
+  constructor(private router: ActivatedRoute, private _location: Location, private newsService: NewsService, public loader: LoaderService) { }
 
   //   ngOnInit() {
   //    this.params = this.router.routerState.snapshot.root.queryParams

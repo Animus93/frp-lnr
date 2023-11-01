@@ -1,15 +1,17 @@
+<div *ngIf="loader.getVisibility()" class="loader-wrap">
+  <div class="loader"></div>
+</div>
 <div class="container">
   <app-header></app-header>
   <app-menu-mobile *ngIf="menu.visibility"></app-menu-mobile>
   <div class="content">
     <router-outlet></router-outlet>
-    <app-no-page
-    class="notification"
-    *ngIf="notification.getVisibility()"
-    ></app-no-page>
+    <app-no-page class="notification" *ngIf="notification.getVisibility()"></app-no-page>
   </div>
   <!-- Yandex.Metrika counter -->
-<noscript><div><img src="https://mc.yandex.ru/watch/94945863" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/94945863" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
   <app-footer></app-footer>
 </div>

@@ -25,6 +25,7 @@ import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { JobsItemComponent } from './components/jobs-item/jobs-item.component';
 import { NewsPageComponent } from './pages/news-page/news-page.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -49,12 +50,13 @@ import { NewsPageComponent } from './pages/news-page/news-page.component';
     JobsComponent,
     JobsItemComponent,
     NewsPageComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    QuillModule
+    QuillModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

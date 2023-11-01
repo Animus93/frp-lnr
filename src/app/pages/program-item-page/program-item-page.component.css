@@ -153,12 +153,12 @@
 }
 
 .pdfLink {
+    width: 150px;
     padding: 10px 0;
     height: 100px;
     width: fit-content;
     display: flex;
     align-items: center;
-
 }
 
 .pdf {
@@ -185,7 +185,23 @@
 .pdfLink:hover .pdfName{
     color: #024fb4;
 }
+.files {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 45px;
+}
 
+/* @media(max-width: 900px) {
+    .pdfName{
+        text-align: center;
+    }
+    .pdfLink {
+        display: flex;
+        flex-direction: column;
+    }
+
+} */
 @media(max-width: 500px) {
     .zItem__use {
         padding-left: 0px;

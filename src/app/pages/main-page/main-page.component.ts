@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import { Inews } from 'src/app/interfaces/Inews.interface';
 import { Subscription } from 'rxjs';
+import { LoaderService } from 'src/app/services/loader.service';
 import { NewsService } from 'src/app/services/news.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { NewsService } from 'src/app/services/news.service';
   styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent {
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService, public loader: LoaderService) { }
   private subscriptions$: Subscription = new Subscription();
 
   showElement = false;
@@ -27,9 +27,11 @@ export class MainPageComponent {
       }
       return
     }
+    this.loader.swhoLoader()
     const fetch$ = this.newsService.getNews().subscribe(data => {
       this.newsService.setNewsState(data.reverse())
       sessionStorage.setItem('savedData1', JSON.stringify(data))
+      this.loader.hideLoader()
     })
     this.subscriptions$.add(fetch$)
   }
