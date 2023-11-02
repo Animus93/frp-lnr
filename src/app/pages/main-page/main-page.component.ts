@@ -20,14 +20,15 @@ export class MainPageComponent {
   }
 
   getData() {
+    this.loader.swhoLoader()
     if (sessionStorage.getItem('savedData1')) {
       const data = JSON.parse(sessionStorage.getItem('savedData1') || '');
       if (data.length > 0) {
         this.newsService.setNewsState(data)
       }
+      this.loader.hideLoader()
       return
     }
-    this.loader.swhoLoader()
     const fetch$ = this.newsService.getNews().subscribe(data => {
       this.newsService.setNewsState(data.reverse())
       sessionStorage.setItem('savedData1', JSON.stringify(data))

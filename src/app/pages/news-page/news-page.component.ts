@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { LoaderService } from 'src/app/services/loader.service';
 import { NewsService } from 'src/app/services/news.service';
 
 @Component({
@@ -9,9 +10,10 @@ import { NewsService } from 'src/app/services/news.service';
   styleUrls: ['./news-page.component.css']
 })
 export class NewsPageComponent {
-  constructor(private _location: Location, public newsService: NewsService) { }
+  constructor(private _location: Location, public newsService: NewsService, public loader: LoaderService) { }
   private subscriptions$: Subscription = new Subscription();
   ngOnInit() {
+    this.loader.swhoLoader()
     this.getData()
   }
 
@@ -21,12 +23,14 @@ export class NewsPageComponent {
       if (data.length > 0) {
         this.newsService.setNewsState(data)
       }
+      this.loader.hideLoader()
       return
     }
     const fetch$ = this.newsService.getNews().subscribe(data => {
       console.log('fetch')
       this.newsService.setNewsState(data.reverse())
       sessionStorage.setItem('savedData1', JSON.stringify(data))
+      this.loader.hideLoader()
     })
     this.subscriptions$.add(fetch$)
   }
