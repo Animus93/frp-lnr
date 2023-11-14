@@ -4,11 +4,12 @@
   <app-menu-mobile *ngIf="menu.visibility"></app-menu-mobile>
   <div class="content">
     <router-outlet></router-outlet>
+    <app-links></app-links>
     <app-no-page class="notification" *ngIf="notification.getVisibility()"></app-no-page>
   </div>
   <!-- Yandex.Metrika counter -->
   <noscript>
-    <div><img src="https://mc.yandex.ru/watch/94945863" style="position:absolute; left:-9999px;" alt="" /></div>
+    <!-- <div><img src="https://mc.yandex.ru/watch/94945863" style="position:absolute; left:-9999px;" alt="" /></div> -->
   </noscript>
   <!-- /Yandex.Metrika counter -->
   <app-footer></app-footer>

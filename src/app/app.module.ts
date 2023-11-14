@@ -26,6 +26,7 @@ import { JobsComponent } from './components/jobs/jobs.component';
 import { JobsItemComponent } from './components/jobs-item/jobs-item.component';
 import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { LinksComponent } from './components/links/links.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     JobsItemComponent,
     NewsPageComponent,
     LoaderComponent,
+    LinksComponent,
   ],
   imports: [
     BrowserModule,
