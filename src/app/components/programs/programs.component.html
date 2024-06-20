@@ -1,0 +1,13 @@
+<div class="container" *ngIf="dataPrograms">
+    <h1 *ngIf="dataPrograms.length > 0" class="title">Программы</h1>
+    <div class="content" >
+        <app-program-item *ngFor="let programItem of dataPrograms" [programItem]="programItem"></app-program-item>
+    </div>
+</div>
+
+<!-- <div class="container" *ngIf="programs$ | async as programs">
+    <h1 *ngIf="programs.length > 0" class="title">Программы</h1>
+    <div class="content" >
+        <app-program-item *ngFor="let programItem of programs" [programItem]="programItem"></app-program-item>
+    </div>
+</div> -->

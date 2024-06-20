@@ -1,0 +1,10 @@
+<div *ngIf="newsService.getNewsState() as data" class="content">
+    <h1 *ngIf="data.length > 0" class="title">Важные новости</h1>
+    <div class="container">
+        <app-news-item *ngFor="let newsItem of data.slice(0,8)" [newsItem]="newsItem"></app-news-item>
+    </div>
+</div>
+<div routerLink="news" class="loadMore">
+    <div class="loadMore__title">Все новости</div>
+    <div class="loadMore__line"></div>
+</div>

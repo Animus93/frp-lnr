@@ -1,0 +1,80 @@
+<div *ngIf="programItem" class="container">
+        <div class="conetnt">
+                <p class="content__title">{{programItem.title}}</p>
+
+                <a routerLink="program/{{programItem.id}}" class="content__btn">Подробнее</a>
+
+                <div class="line"></div>
+                <p class="content__type">{{programItem.type}}</p>
+                <ul class="zInfo-1400">
+                        <div class="pt">
+
+                                <li *ngIf="programItem.zSumm?.length" class="zItem"><img src="assets/icons/money.svg"
+                                                alt="icon" class="icon"><label class="title">Сумма
+                                                займа</label>
+                                        <p class="tx">{{programItem.zSumm}}</p>
+                                </li>
+                                <li *ngIf="programItem.zTime?.length" class="zItem"><img src="assets/icons/time.svg"
+                                                alt="icon" class="icon"><label class="title">Срок
+                                                займа</label>
+                                        <p class="tx">{{programItem.zTime}}</p>
+                                </li>
+                        </div>
+                        <div class="pt">
+
+                                <li *ngIf="programItem.zBet?.length" class="zItem"><img src="assets/icons/bet.svg"
+                                                alt="icon" class="icon"><label class="title">Ставка</label>
+                                        <p class="tx">{{programItem.zBet}}</p>
+                                </li>
+                                <li *ngIf="programItem.zBudget?.length" class="zItem"><img src="assets/icons/budget.svg"
+                                                alt="icon" class="icon"><label class="title">Общий бюджет
+                                                проекта</label>
+                                        <p class="tx">{{programItem.zBudget}}</p>
+                                </li>
+                        </div>
+                        <div class="pt">
+
+                                <li *ngIf="programItem.zFinancing?.length" class="zItem"><img
+                                                src="assets/icons/financing.svg" alt="icon" class="icon"><label
+                                                class="title">Софинансирование <br>
+                                                заемщиком</label>
+                                        <p class="tx">{{programItem.zFinancing}}</p>
+                                </li>
+                                <!-- <li *ngIf="programItem.zSumm?.length" class="zItem"><img src="assets/icons/money.svg"
+                                                alt="icon" class="icon"><label class="title">Сумма
+                                                займа</label><p class="tx">{{programItem.zSumm}}</p></li> -->
+                        </div>
+
+                </ul>
+                <ul class="zInfo">
+                        <li *ngIf="programItem.zSumm?.length" class="zItem"><img src="assets/icons/money.svg" alt="icon"
+                                        class="icon"><label class="title">Сумма
+                                        займа</label>
+                                <p class="tx">{{programItem.zSumm}}</p>
+                        </li>
+                        <li *ngIf="programItem.zTime?.length" class="zItem"><img src="assets/icons/time.svg" alt="icon"
+                                        class="icon"><label class="title">Срок
+                                        займа</label>
+                                <p class="tx">{{programItem.zTime}}</p>
+                        </li>
+
+                        <li *ngIf="programItem.zBet?.length" class="zItem"><img src="assets/icons/bet.svg" alt="icon"
+                                        class="icon"><label class="title">Ставка</label>
+                                <p class="tx">{{programItem.zBet}}</p>
+                        </li>
+                        <li *ngIf="programItem.zBudget?.length" class="zItem"><img src="assets/icons/budget.svg"
+                                        alt="icon" class="icon"><label class="title">Общий бюджет
+                                        проекта</label>
+                                <p class="tx">{{programItem.zBudget}}</p>
+                        </li>
+                        <li *ngIf="programItem.zFinancing?.length" class="zItem"><img src="assets/icons/financing.svg"
+                                        alt="icon" class="icon"><label class="title">Софинансирование <br>
+                                        заемщиком</label>
+                                <p class="tx">{{programItem.zFinancing}}</p>
+                        </li>
+                        <!-- <li *ngIf="programItem.zSumm?.length" class="zItem"><img src="assets/icons/money.svg" alt="icon"
+                                        class="icon"><label class="title">Сумма
+                                        займа</label>{{programItem.zSumm}}</li> -->
+                </ul>
+        </div>
+</div>

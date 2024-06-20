@@ -1,0 +1,23 @@
+<div class="container">
+  <div id="mainPage" class="content">
+    <div routerLink="main" class="title-logo"></div>
+    <app-contacts class="in"></app-contacts>
+    <button (click)="this.notification.swithcVisible()" class="become-partner">Стать участником</button>
+    <div class="links">
+      <div (click)="this.menu.switchVisibility()" class="links__menu">
+        <img src="assets/icons/menu.svg" alt="login-icon" class="logo" />
+      </div>
+      <div (click)="this.notification.swithcVisible()" class="links__personal">
+        <img src="assets/icons/login.svg" alt="login-icon" class="logo" />
+        <p class="links__personal__text">Личный кабинет</p>
+      </div>
+      <div (click)="this.notification.swithcVisible()" class="links__serch">
+        <img src="assets/icons/search.svg" alt="search-icon" class="logo" />
+        <p class="links__personal__text">Поиск</p>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-line">
+    <app-contacts class="out"></app-contacts>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<button class="back" (click)="backClicked()"><img src="assets/icons/back.svg"
+    alt="back arrow">Назад</button>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>
+<div *ngIf="this.programsItem$| async as programsItem; else loading" class="container">
+  <div class="content">
+    <h1 class="content__title">{{programsItem.title}}</h1>
+    <p *ngIf="programsItem.type" class="sub-title">
+      {{programsItem.type}}
+    </p>
+    <p class="content__title">Информация</p>
+    <p class="sub-title-info">{{programsItem.info}}</p>
+    <ul class="zInfo">
+      <li *ngIf="programsItem.zSumm?.length" class="zItem"><img src="assets/icons/money1.svg"
+          alt="icon" class="icon"><label class="title">Сумма
+          займа</label>
+        <p class="tx">{{programsItem.zSumm}}</p>
+      </li>
+      <li *ngIf="programsItem.zTime?.length" class="zItem"><img src="assets/icons/time1.svg"
+          alt="icon" class="icon"><label class="title">Срок
+          займа</label>
+        <p class="tx">{{programsItem.zTime}}</p>
+      </li>
+
+      <li *ngIf="programsItem.zBet?.length" class="zItem"><img src="assets/icons/bet1.svg"
+          alt="icon" class="icon"><label class="title">Ставка</label>
+        <p class="tx">{{programsItem.zBet}}</p>
+      </li>
+      <li *ngIf="programsItem.zBudget?.length" class="zItem"><img src="assets/icons/budget1.svg"
+          alt="icon" class="icon"><label class="title">Общий бюджет
+          проекта</label>
+        <p class="tx">{{programsItem.zBudget}}</p>
+      </li>
+      <li *ngIf="programsItem.zFinancing?.length" class="zItem"><img
+          src="assets/icons/financing1.svg" alt="icon" class="icon"><label
+          class="title">Софинансирование заемщиком</label>
+        <p class="tx">{{programsItem.zFinancing}}</p>
+      </li>
+    </ul>
+    <div class="zItem__use" *ngIf="programsItem.zUse?.length">
+      <div class="zItem-logo">
+        <img src="assets/icons/target.svg" alt="icon" class="icon"><label
+          class="zItem__use-title">Целевое
+          использование</label>
+      </div>
+      <p class="tx2">{{programsItem.zUse}}</p>
+    </div>
+    <div class="contects">
+      <h1 class="content__title">Контактная информация</h1>
+      <p class="tx-contacts">
+        Фонд развития промышленности Луганской Народной Республики <br>
+        Адрес: г. Луганск, пл. Героев ВОВ, 3а, 5 этаж, 521 кабинет<br>
+        Тел.: (0642) 50 01 72 <br>
+        Email: <a class="mail" href="mailto:info@frp-lnr.ru">info@frp-lnr.ru</a>
+      </p>
+    </div>
+    <h1 class="content__title">Подробная информация о программе</h1>
+    <quill-view class="caption" [content]="programsItem.caption"></quill-view>
+    <div class="files">
+
+      <a class="pdfLink" *ngIf="'assets/pdf/'+programsItem.title+'.pdf'"
+        [href]="'assets/pdf/'+programsItem.title+'.pdf'" download>
+        <img class="pdf" src="assets/icons/png.png" alt="">
+        <p class="pdfName">{{programsItem.title}}</p>
+      </a>
+      <a class="pdfLink" *ngIf="'assets/pdf/static/Обеспечение возврата займа.pdf'"
+        [href]="'assets/pdf/static/Обеспечение возврата займа.pdf'" download>
+        <img class="pdf" src="assets/icons/png.png" alt="">
+        <p class="pdfName">Обеспечение возврата займа</p>
+      </a>
+      <a class="pdfLink" *ngIf="'assets/pdf/static/Мониторинг.pdf'"
+        [href]="'assets/pdf/static/Мониторинг.pdf'" download>
+        <img class="pdf" src="assets/icons/png.png" alt="">
+        <p class="pdfName">Мониторинг</p>
+      </a>
+      <a class="pdfLink" *ngIf="programsItem.type !== 'Совместная программа'"
+        [href]="'assets/pdf/static/Методические рекомендации по оценке имущества.pdf'" download>
+        <img class="pdf" src="assets/icons/png.png" alt="">
+        <p class="pdfName">Методические рекомендации по оценке имущества</p>
+      </a>
+    </div>
+    <!-- <p class="caption">
+            {{programsItem.caption}}
+        </p> -->
+  </div>
+</div>

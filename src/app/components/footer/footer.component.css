@@ -1,0 +1,61 @@
+.container {
+    width: 100%;
+    max-width: 100vw;
+    height: 60px;
+    background-color: #003170;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    max-width: 1500px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title-logo {
+    background: url('src/assets/icons/frplogoWhite.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.title-logo:hover {
+scale: .9;
+}
+.social {
+    width: fit-content;
+    display: flex;
+    column-gap: 10px;
+}
+.social__icon{
+    width: 30px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.social__icon:hover{
+    scale: .9;
+}
+@media (max-width:400px) {
+    .title-logo {
+        width: 130px;
+        height: 35px;
+    }
+}
+@media (max-width:620px) {
+    .title-logo {
+        display: none;
+    }
+}

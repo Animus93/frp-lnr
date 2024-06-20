@@ -1,0 +1,18 @@
+<div (click)="mobile?menu.switchVisibility():null" [ngClass]="mobile? 'mobile-container':'container'">
+  <ul [ngClass]="mobile? 'header-menu-mobile':'header-menu'">
+    <li routerLink="main" class="header-menu__item">Главная</li>
+    <li routerLink="main/news" class="header-menu__item">Новости</li>
+    <!-- <li [routerLink]="['main/']" fragment="news" class="header-menu__item">Новости</li> -->
+    <li [routerLink]="['main/']" fragment="programs" class="header-menu__item">Программы фонда</li>
+    <!-- <li class="header-menu__item">Меры поддержки</li> -->
+    <!-- <li class="header-menu__item">Промышленность ЛНР</li> -->
+    <!-- <li class="header-menu__item">Партнеры</li> -->
+    <!-- <li class="header-menu__item">Проекты</li> -->
+    <!-- <li (click)="this.notification.swithcVisible()" class="header-menu__item">О фонде</li> -->
+    <li class="header-menu__item"><a [ngClass]="mobile? 'header-menu__item-mobile':'header-menu__item'"
+        routerLink="main/about">О фонде</a></li>
+    <li class="header-menu__item"><a [ngClass]="mobile? 'header-menu__item-mobile':'header-menu__item'"
+        routerLink="main/jobs">Вакансии</a></li>
+    <!-- <li (click)="this.notification.swithcVisible()" class="header-menu__item">Вакансии</li> -->
+  </ul>
+</div>

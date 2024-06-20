@@ -1,0 +1,11 @@
+<button class="back" (click)="backClicked()"><img src="assets/icons/back.svg" alt="back arrow">Назад</button>
+<!-- Type-checking is disabled for this template -->
+<div class="container" *ngIf="NewsItem$ | async as newsItem">
+    <h1 class="title">{{newsItem.title}}</h1>
+    <div class="content">
+        <img src={{newsItem.img}} alt="image" class="preview">
+        <div class="description">
+            <quill-view [content]="newsItem.caption"></quill-view>
+        </div>
+    </div>
+</div>

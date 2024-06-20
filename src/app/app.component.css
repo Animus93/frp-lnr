@@ -1,0 +1,20 @@
+ .container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+ }
+
+ .content {
+   max-width: 1500px;
+   width: 100%;
+   margin: 0 auto 60px auto;
+ }
+
+ .notification {
+   position: fixed;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }

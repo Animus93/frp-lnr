@@ -1,0 +1,12 @@
+<div>
+  <!-- <div [ngClass]="white?'contacts__links black':'contacts__links black'"> -->
+  <div [ngClass]="white? 'contacts__links col':'contacts__links'">
+    <a [ngClass]="white?'contacts__phone white':'contacts__phone black'" href="tel:+79592692515" target="_blank"><img
+        src="assets/icons/phone.svg" alt="phone-icon" class="logo" />+7(959) 269 25 15</a>
+    <a [ngClass]="white?'contacts__mail white':'contacts__mail black'" href="mailto:info@frp-lnr.ru"><img
+        src="assets/icons/mail.svg" alt="mail-icon" class="logo" />info@frp-lnr.ru</a>
+  </div>
+  <p [ngClass]="white?'hide':'contacts__adress black'">
+    г. Луганск, пл. Героев ВОВ, 3а, 5 этаж, 521 кабинет
+  </p>
+</div>

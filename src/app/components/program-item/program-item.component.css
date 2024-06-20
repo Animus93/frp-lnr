@@ -1,0 +1,237 @@
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../../assets/progs.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.conetnt {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 37, 0.534);
+    display: grid;
+    grid-template-rows: 25% 5% 10% auto;
+    grid-template-columns: auto 30%;
+}
+
+.line {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffffb0;
+    align-self: center;
+    justify-self: center;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    padding: 0px 25px;
+}
+
+
+/* .zInfo {
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    align-self: flex-end;
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-row: (1, fit-content);
+    margin: 0 auto;
+    padding: 0px 0px 10px 0px;
+    padding: 20px;
+
+} */
+.zInfo {
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    align-self: flex-end;
+    list-style: none;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0px 0px 10px 0px;
+}
+
+.zItem {
+    font-size: 16px;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 50px 200px;
+    grid-template-rows: repeat(fit-content);
+    row-gap: 5px;
+    white-space: nowrap;
+}
+
+.icon {
+    align-self: center;
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+.title {
+    font-weight: 600;
+    grid-column: 2;
+    grid-row: 1/2;
+    align-self: flex-end;
+}
+
+.tx {
+    /* display: inline-block; */
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    grid-column: 2;
+    grid-row: 2/3;
+}
+
+.content__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: flex-end;
+    justify-self: center;
+    border: none;
+    width: 170px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px;
+    background: none;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid white;
+    box-sizing: initial;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.content__btn:hover {
+    background-color: #fff;
+    color: #003170
+}
+
+.content__title {
+    align-self: center;
+    justify-self: flex-start;
+    color: #fff;
+    font-size: clamp(1.7rem, 2.5vw, 2rem);
+    font-weight: 400;
+    padding-left: 50px;
+}
+
+.content__type {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    font-size: 18px;
+    color: #fff;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.zInfo-1400 {
+    display: none;
+}
+
+.pt {
+    width: 300px;
+}
+
+@media (max-width: 1400px) {
+
+    /* .container {
+        width: 100%;
+        height: 350px;
+    } */
+    .zInfo-1400 {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+        align-self: flex-end;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0px 0px 10px 0px;
+    }
+
+    .zInfo {
+        display: none;
+    }
+
+    .conetnt {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 1, 37, 0.534);
+        display: grid;
+        grid-template-rows: 15% 5% 10% auto 20%;
+        grid-template-columns: 100%;
+    }
+
+    .content__title {
+        padding: 0 15px;
+        grid-row: 1/2;
+        grid-column: 1/-1;
+    }
+
+    .line {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+
+    }
+
+    .content__type {
+        grid-row: 3/4;
+        align-self: center;
+        grid-column: 1/-1;
+
+    }
+
+    .zInfo {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+
+
+
+    }
+
+    .content__btn {
+        grid-row: 5/6;
+        align-self: center;
+        justify-self: center;
+        grid-column: 1/-1;
+
+    }
+
+}
+
+@media (max-width: 770px) {
+    
+    .container {
+        height: 800px;
+    }
+
+    .zInfo-1400 {
+
+        display: none;
+    }
+
+    .zInfo {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+        align-self: flex-end;
+        list-style: none;
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0px 0px 10px 0px;
+    }
+}

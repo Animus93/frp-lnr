@@ -1,0 +1,7 @@
+<button class="back" (click)="backClicked()"><img src="assets/icons/back.svg" alt="back arrow">Назад</button>
+<div *ngIf="newsService.getNewsState() as data" class="content">
+    <h1 *ngIf="data.length > 0" class="title">Новости</h1>
+    <div class="container">
+        <app-news-item *ngFor="let newsItem of data" [newsItem]="newsItem"></app-news-item>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="container">
+    <a *ngFor="let item of links" class="item" [href]="item.link" target="_blank">
+        <img class="item-img" [src]="item.icon" [alt]="item.name">
+        <p class="item-name">{{item.name}}</p>
+    </a>
+</div>

@@ -1,0 +1,9 @@
+<ng-template #loading>
+    <app-loader></app-loader>
+</ng-template>
+<div class="container" *ngIf="jobs$|async as jobs; else loading">
+    <h1 *ngIf="jobs.length > 0" class="title">Вакансии</h1>
+    <div class="content">
+        <app-jobs-item *ngFor="let jobItem of jobs" [job]="jobItem"></app-jobs-item>
+    </div>
+</div>
